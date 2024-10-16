@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-const url = "URL_TO_BE_INSERTED";
+const url = import.meta.env.VITE_WIRT_URL;
 
 export default function Game() {
   const [image, setImage] = useState();
