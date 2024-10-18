@@ -1,4 +1,6 @@
-// Big Picture explanation: This pr
+// Big Picture explanation: This presentation is a reusable Card component that takes props of name, display name, and source to return a styled card.
+
+import PropTypes from "prop-types";
 
 export default function Card({ name, displayName, source }) {
   Card.propTypes = {
