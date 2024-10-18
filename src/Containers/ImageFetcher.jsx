@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Card from "../Presentations/Card";
 
 // Create IMAGES array to house names and api url locations of images to fetch. URLs can be found in local .env file.
 const IMAGES = [
@@ -147,22 +148,15 @@ export default function ImageFetcher() {
   return (
     <>
       <div className="w-screen flex flex-col justify-center items-center">
-        <ul className="grid grid-cols-3 gap-6">
+        <ul className="grid grid-cols-4 gap-6">
           {IMAGES.map(({ name, displayName }) => {
             return (
-              <li
+              <Card
                 key={name}
-                className="flex flex-col justify-start items-center"
-              >
-                <h2 className="text-xl">{displayName}</h2>
-                <div className="bg-gradient-to-r from-red-600 to-amber-700 p-6 w-64 h-80 rounded-2xl flex items-center justify-center">
-                  <img
-                    src={images[name]}
-                    alt={displayName}
-                    className="max-h-full max-w-full object-contain rounded-md"
-                  />
-                </div>
-              </li>
+                name={name}
+                displayName={displayName}
+                source={images[name]}
+              ></Card>
             );
           })}
         </ul>
