@@ -1,4 +1,4 @@
-import PropTypes from "prop-types";
+// Big Picture explanation: This pr
 
 export default function Card({ name, displayName, source }) {
   Card.propTypes = {
@@ -16,7 +16,7 @@ export default function Card({ name, displayName, source }) {
             <img
               src={source}
               alt={displayName}
-              className="max-h-full max-w-full object-contain rounded-md "
+              className="max-h-full max-w-full object-contain rounded-md"
             />
           </div>
         </div>

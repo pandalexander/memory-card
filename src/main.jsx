@@ -1,10 +1,10 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import ImageFetcher from "./Containers/ImageFetcher";
+import App from "./App";
 import "./index.css";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <ImageFetcher></ImageFetcher>
+    <App></App>
   </StrictMode>
 );

@@ -1,3 +1,5 @@
+// Big Picture explanation: This container fetches images files once and returns a bunch of Card components with information about the fetched items in the Card props. The props include the name of the image, the display name of the image, and the src url for the image tag.
+
 import { useEffect, useState } from "react";
 import Card from "../Presentations/Card";
 
@@ -147,20 +149,16 @@ export default function ImageFetcher() {
 
   return (
     <>
-      <div className="w-screen flex flex-col justify-center items-center">
-        <ul className="grid grid-cols-4 gap-6">
-          {IMAGES.map(({ name, displayName }) => {
-            return (
-              <Card
-                key={name}
-                name={name}
-                displayName={displayName}
-                source={images[name]}
-              ></Card>
-            );
-          })}
-        </ul>
-      </div>
+      {IMAGES.map(({ name, displayName }) => {
+        return (
+          <Card
+            key={name}
+            name={name}
+            displayName={displayName}
+            source={images[name]}
+          ></Card>
+        );
+      })}
     </>
   );
 }
