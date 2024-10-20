@@ -1,0 +1,10 @@
+.grid-container {
+  box-sizing: border-box;
+  resize: none;
+  overflow: auto;
+  display: grid;
+  gap: 60px;
+  padding: 60px;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}

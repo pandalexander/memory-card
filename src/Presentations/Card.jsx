@@ -11,14 +11,19 @@ export default function Card({ name, displayName, source }) {
 
   return (
     <>
-      <li key={name} className="flex flex-col justify-start items-center">
-        <div className=" p-4 rounded-2xl bg-amber-700 flex flex-col items-center justify-start">
-          <h2 className="text-xl text-center">{displayName}</h2>
-          <div className="flex items-end justify-center w-40 h-48">
+      <li key={name} className="list-none">
+        <div className="w-42 h-64 shadow-md overflow-hidden p-4 rounded-2xl bg-amber-700 flex flex-col">
+          <div className="flex-grow overflow-y-auto mb-2">
+            <h2 className="text-lg font-bold text-center">{displayName}</h2>
+          </div>
+          <div
+            className="w-full flex-shrink min-h-0 overflow-hidden rounded-lg"
+            style={{ flexBasis: "0%", flexGrow: 999 }}
+          >
             <img
               src={source}
               alt={displayName}
-              className="max-h-full max-w-full object-contain rounded-md"
+              className="w-full h-full object-cover object-center"
             />
           </div>
         </div>
