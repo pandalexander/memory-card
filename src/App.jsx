@@ -9,6 +9,9 @@ function App() {
           <ImageFetcher></ImageFetcher>
         </ul>
       </div> */}
+      <h1 className="text-center my-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+        Over The Garden Wall Memory Card Game
+      </h1>
       <div className="grid-container">
         <ImageFetcher></ImageFetcher>
       </div>
